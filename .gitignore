@@ -1,0 +1,10 @@
+*
+!.gitignore
+!.gitconfig
+!.nanorc
+!.bashrc
+!.nano/
+!.nano/*.nanorc
+!.conky/
+!.conky/*
+!.conkyrc

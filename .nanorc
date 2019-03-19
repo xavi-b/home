@@ -1,0 +1,7 @@
+include ~/.nano/*.nanorc
+
+set tabsize 4
+set tabstospaces
+set nowrap
+set linenumbers
+set historylog
