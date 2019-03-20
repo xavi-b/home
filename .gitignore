@@ -5,7 +5,6 @@
 !.nanorc
 !.bashrc
 !.nano/
-!.nano/*.nanorc
 !.conky/
-!.conky/*
 !.conkyrc
+!deploy.py

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 USERCOLOR="\[\033[38;5;4m\]"
 ROOTCOLOR="\[\033[31m\]"
 HOSTCOLOR="\[\033[38;5;226m\]"
