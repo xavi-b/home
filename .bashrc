@@ -18,15 +18,15 @@ PS1+="$TIMECOLOR[\t] $WHITECOLOR$BOLD"
 
 # user@host
 if [[ ${EUID} == 0 ]] ; then
-	PS1+=$ROOTCOLOR 
+	PS1+=$ROOTCOLOR
 else
-	PS1+=$USERCOLOR 
+	PS1+=$USERCOLOR
 fi
 PS1+="\u$WHITECOLOR$NORMAL@$BOLD$HOSTCOLOR\h$NORMAL$WHITECOLOR: "
 
 parse_git_branch()
 {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 parse_git_status()
@@ -40,7 +40,7 @@ if [[ ${EUID} == 0 ]] ; then
 else
 	PS1+="$DIRCOLOR"
 fi
-    
+
 PS1+="$BOLD\w"
 
 if [[ ${EUID} == 0 ]] ; then
@@ -65,6 +65,8 @@ export PS1
 PS2=">>"
 
 export PS2
+
+source ~/.git-completion.bash
 
 alias ls='ls --color'
 alias grep='grep --color'

@@ -1,6 +1,7 @@
 *
 !.gitignore
 !.gitconfig
+!.git-completion.bash
 !.nanorc
 !.bashrc
 !.nano/
