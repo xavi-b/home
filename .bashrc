@@ -75,7 +75,7 @@ alias grep='grep --color'
 alias ll='ls -la'
 alias cp='cp -i'
 
-alias lld='ll -h'
+alias lld='ll -rt'
 alias mkdir='mkdir -pv'
 mktar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }    # Creates a *.tar.gz archive of a file or folder
 mkzip() { zip -r "${1%%/}.zip" "$1" ; }               # Create a *.zip archive of a file or folder
