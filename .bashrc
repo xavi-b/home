@@ -1,14 +1,15 @@
 #!/bin/bash
 
+# git
+source ".gitprompt.sh"
+
 USERCOLOR="\[\033[38;5;4m\]"
 ROOTCOLOR="\[\033[31m\]"
 HOSTCOLOR="\[\033[38;5;226m\]"
 DIRCOLOR="\[\033[32m\]"
 WHITECOLOR="\[\033[00m\]"
 TIMECOLOR="\[\033[38;5;208m\]"
-GITCOLOR="\[\033[38;5;136m\]"
 ROOTDIRCOLOR="\[\033[38;5;196m\]"
-ROOTGITCOLOR="\[\033[38;5;168m\]"
 
 BOLD="\[\e[1m\]"
 NORMAL="\[\e[0m\]"
@@ -26,16 +27,6 @@ else
 fi
 PS1+="\u$WHITECOLOR$NORMAL@$BOLD$HOSTCOLOR\h$NORMAL$WHITECOLOR: "
 
-parse_git_branch()
-{
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
-parse_git_status()
-{
-	git status -s 2> /dev/null | wc -l
-}
-
 # directory
 if [[ ${EUID} == 0 ]] ; then
     PS1+="$ROOTDIRCOLOR"
@@ -43,22 +34,10 @@ else
 	PS1+="$DIRCOLOR"
 fi
 
-PS1+="$BOLD\w"
+PS1+="$BOLD\w "
 
-if [[ ${EUID} == 0 ]] ; then
-	PS1+="$ROOTGITCOLOR"
-else
-	PS1+="$GITCOLOR"
-fi
-
-GITBRANCH='$(parse_git_branch)'
-
+# git
 PS1+="$GITBRANCH"
-
-#if [ "$GITBRANCH" != 0 ] ; then
-#	PS1+="$ROOTDIRCOLOR "
-#	PS1+='[$(parse_git_status)]'
-#fi
 
 PS1+="$NORMAL$WHITECOLOR\n▶▶ "
 
