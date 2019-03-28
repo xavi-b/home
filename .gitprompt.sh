@@ -1,14 +1,14 @@
 #!/bin/bash
 
-WHITECOLOR="\[\e[39m\]"
-REDCOLOR="\[\e[91m\]"
-BLUECOLOR="\[\e[94m\]"
-GREENCOLOR="\[\e[92m\]"
+WHITECOLOR="\e[39m"
+REDCOLOR="\e[91m"
+BLUECOLOR="\e[94m"
+GREENCOLOR="\e[92m"
 
-GITCOLOR="\[\033[38;5;136m\]"
+GITCOLOR="\033[38;5;136m"
 
 if [[ ${EUID} == 0 ]] ; then
-    GITCOLOR="\[\033[38;5;168m\]"
+    GITCOLOR="\033[38;5;168m"
 fi
 
 getGitCounts()
@@ -74,7 +74,12 @@ getGitCounts()
         UNSTAGEDCOUNT="$BLUECOLOR◯$UNSTAGEDCOUNT"
     fi
 
-    echo "$AHEADCOUNT$BEHINDCOUNT$STAGEDCOUNT$DIRTYCOUNT$UNSTAGEDCOUNT$UNTRACKEDCOUNT"
+    local RESULT="$AHEADCOUNT$BEHINDCOUNT$STAGEDCOUNT$DIRTYCOUNT$UNSTAGEDCOUNT$UNTRACKEDCOUNT"
+    if ! [[ -z RESULT ]]; then
+        RESULT="$WHITECOLOR|$RESULT"
+    fi
+
+    echo "$RESULT"
 }
 
 getGitStatus()
@@ -111,7 +116,7 @@ getGitStatus()
             STATE=BISECT
         fi
 
-        GITBRANCH="$GITCOLOR"
+        local GITBRANCH="$GITCOLOR"
         if [[ -n "$STATE" ]]; then
             GITBRANCH+="{$BRANCH|$STATE"
             GITBRANCH+=$(getGitCounts)
@@ -139,6 +144,6 @@ getGitStatus()
     else
         GITBRANCH=""
     fi
-}
 
-PROMPT_COMMAND="date;getGitStatus;echo -e $GITBRANCH;$PROMPT_COMMAND"
+    echo -e $GITBRANCH
+}
