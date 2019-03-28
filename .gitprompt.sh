@@ -75,7 +75,7 @@ getGitCounts()
     fi
 
     local RESULT="$AHEADCOUNT$BEHINDCOUNT$STAGEDCOUNT$DIRTYCOUNT$UNSTAGEDCOUNT$UNTRACKEDCOUNT"
-    if ! [[ -z RESULT ]]; then
+    if ! [[ -z "$RESULT" ]]; then
         RESULT="$WHITECOLOR|$RESULT"
     fi
 
