@@ -2,9 +2,12 @@
 !.gitignore
 !.gitconfig
 !.bash/
+!.bash/**
 !.nanorc
 !.bashrc
 !.nano/
+!.nano/**
 !.conky/
+!.conky/**
 !.conkyrc
 !deploy.py
