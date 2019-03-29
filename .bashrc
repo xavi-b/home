@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/.bash/docker
+source ~/.bash/docker-compose
 source ~/.bash/git-completion.bash
 source ~/.bash/gitprompt.sh
 source ~/.bash/hostcolor.sh
