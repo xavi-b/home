@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WHITECOLOR="\e[39m"
+RESETCOLOR="\e[39m"
 REDCOLOR="\e[91m"
 BLUECOLOR="\e[94m"
 GREENCOLOR="\e[92m"
@@ -34,12 +34,12 @@ getGitCounts()
             if [[ "$AHEADCOUNT" = 0 ]]; then
                 AHEADCOUNT=""
             else
-                AHEADCOUNT="$WHITECOLOR↑$AHEADCOUNT"
+                AHEADCOUNT="$RESETCOLOR↑$AHEADCOUNT"
             fi
             if [[ "$BEHINDCOUNT" = 0 ]]; then
                 BEHINDCOUNT=""
             else
-                BEHINDCOUNT="$WHITECOLOR↓$BEHINDCOUNT"
+                BEHINDCOUNT="$RESETCOLOR↓$BEHINDCOUNT"
             fi
         fi
     fi
@@ -57,7 +57,7 @@ getGitCounts()
     if [[ "$UNTRACKEDCOUNT" = 0 ]]; then
         UNTRACKEDCOUNT=""
     else
-        UNTRACKEDCOUNT="$WHITECOLOR◌$UNTRACKEDCOUNT"
+        UNTRACKEDCOUNT="$RESETCOLOR◌$UNTRACKEDCOUNT"
     fi
 
     local STAGEDCOUNT=$(echo "$STATUS" | grep -s -c '^[AMDR]')
@@ -76,7 +76,7 @@ getGitCounts()
 
     local RESULT="$AHEADCOUNT$BEHINDCOUNT$STAGEDCOUNT$DIRTYCOUNT$UNSTAGEDCOUNT$UNTRACKEDCOUNT"
     if ! [[ -z "$RESULT" ]]; then
-        RESULT="$WHITECOLOR|$RESULT"
+        RESULT="$RESETCOLOR|$RESULT"
     fi
 
     echo "$RESULT"
