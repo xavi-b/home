@@ -68,6 +68,7 @@ alias ls='ls --color'
 alias grep='grep --color'
 alias ll='ls -la'
 alias cp='cp -i'
+alias cdiff='colordiff'
 
 alias lld='ll -rt'
 alias mkdir='mkdir -pv'
