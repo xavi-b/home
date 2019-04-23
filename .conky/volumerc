@@ -40,5 +40,5 @@ conky.config = {
 }
 
 conky.text = [[
-${execpi 0.5 ~/.conky/getVolume.py}
+${execpi 0.5 ~/.conky/getVolume.py}  BL  ${execibar 0.5 xbacklight -get}
 ]]
