@@ -11,3 +11,5 @@
 !.conky/**
 !.conkyrc
 !deploy.py
+!.crontab/
+!.crontab/**
