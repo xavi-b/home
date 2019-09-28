@@ -77,4 +77,6 @@ mkzip() { zip -r "${1%%/}.zip" "$1" ; }               # Create a *.zip archive o
 
 alias dockerc='docker-compose'
 
+alias dcrestart='dockerc down; dockerc up -d && dockerc logs -ft'
+
 export EDITOR=nano
