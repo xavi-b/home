@@ -82,3 +82,9 @@ alias dcrestart='dockerc down; dockerc up -d && dockerc logs -ft'
 export EDITOR=nano
 
 . /usr/share/z/z.sh
+
+mcd()
+{
+    mkdir -p $1
+    cd $1
+}
