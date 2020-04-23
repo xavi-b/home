@@ -80,3 +80,5 @@ alias dockerc='docker-compose'
 alias dcrestart='dockerc down; dockerc up -d && dockerc logs -ft'
 
 export EDITOR=nano
+
+. /usr/share/z/z.sh
