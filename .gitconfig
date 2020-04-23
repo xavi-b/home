@@ -5,3 +5,8 @@
     editor = nano
 [color]
     ui = auto
+[alias]
+    co = checkout
+    st = status
+    ci = commit
+    br = branch
