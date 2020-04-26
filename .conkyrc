@@ -62,6 +62,7 @@ ${color grey}File systems:
 ${fs_bar 8 /}
 
 ${color grey}Networking:
+ ${color grey}wlan0  $color${addr wlan0}$alignr
  ${color grey}wlp1s0 $color${addr wlp1s0}$alignr
  ${color grey}enp3s0 $color${addr enp3s0}$alignr
 
