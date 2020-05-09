@@ -13,3 +13,5 @@
 !deploy.py
 !.crontab/
 !.crontab/**
+!.config/
+!.config/**

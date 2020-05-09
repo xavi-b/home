@@ -1,0 +1,55 @@
+[global_config]
+[keybindings]
+  zoom_in = None
+  zoom_out = None
+  zoom_normal = None
+  new_tab = <Primary>t
+  split_horiz = <Shift><Alt>a
+  split_vert = <Shift><Alt>z
+  close_term = <Primary>w
+  copy = None
+  paste = <Primary>v
+  toggle_scrollbar = None
+  close_window = <Primary><Shift>w
+  resize_up = None
+  resize_down = None
+  resize_left = None
+  resize_right = None
+  move_tab_right = None
+  move_tab_left = None
+  toggle_zoom = None
+  scaled_zoom = None
+  next_tab = None
+  prev_tab = None
+  full_screen = None
+  hide_window = None
+  group_all = None
+  group_tab = None
+  new_window = None
+  new_terminator = None
+  broadcast_off = None
+  broadcast_group = None
+  broadcast_all = None
+  insert_number = None
+  insert_padded = None
+  edit_window_title = None
+  edit_tab_title = None
+  edit_terminal_title = None
+[profiles]
+  [[default]]
+    background_color = "#2e3436"
+    cursor_color = "#aaaaaa"
+    font = Monospace 9
+    foreground_color = "#d3d7cf"
+    palette = "#2e3436:#ff2a2a:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#fc3d3d:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
