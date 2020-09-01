@@ -37,7 +37,7 @@
   edit_terminal_title = None
 [profiles]
   [[default]]
-    background_color = "#2e3436"
+    background_color = "#131926"
     cursor_color = "#aaaaaa"
     font = Monospace 9
     foreground_color = "#d3d7cf"
