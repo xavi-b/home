@@ -66,7 +66,7 @@ export PS2
 
 alias ls='ls --color'
 alias grep='grep --color'
-alias ll='ls -la'
+alias ll='ls -lha'
 alias cp='cp -i'
 alias diff='diff --color'
 
