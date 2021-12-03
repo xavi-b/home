@@ -2,6 +2,7 @@
 
 source ~/.bash/docker
 source ~/.bash/docker-compose
+source ~/.bash/adb-completion.bash
 source ~/.bash/git-completion.bash
 source ~/.bash/gitprompt.sh
 source ~/.bash/hostcolor.sh
