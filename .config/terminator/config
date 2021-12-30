@@ -6,7 +6,7 @@
   new_tab = <Primary>t
   split_horiz = <Shift><Alt>a
   split_vert = <Shift><Alt>z
-  close_term = <Primary>w
+  close_term = <Shift><Alt>w
   copy = None
   paste = <Primary>v
   toggle_scrollbar = None
