@@ -90,4 +90,9 @@ mcd()
     cd $1
 }
 
+gitdate()
+{
+    GIT_COMMITTER_DATE="$1" git commit --amend --no-edit --date "$1"
+}
+
 export PATH=~/.local/bin:$PATH
