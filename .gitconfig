@@ -10,3 +10,4 @@
     st = status
     ci = commit
     br = branch
+    cp = cherry-pick
