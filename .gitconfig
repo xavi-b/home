@@ -11,3 +11,7 @@
     ci = commit
     br = branch
     cp = cherry-pick
+[rebase]
+    stat = true
+[status]
+    submodulesummary = 1
