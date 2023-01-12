@@ -11,6 +11,7 @@
     ci = commit
     br = branch
     cp = cherry-pick
+    fix-submodules = submodule update --recursive --init
 [rebase]
     stat = true
 [status]
