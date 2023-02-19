@@ -12,6 +12,7 @@
     br = branch
     cp = cherry-pick
     fix-submodules = submodule update --recursive --init
+    reset-author = commit --amend --reset-author --no-edit
 [rebase]
     stat = true
 [status]
