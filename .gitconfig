@@ -13,6 +13,7 @@
     cp = cherry-pick
     fix-submodules = submodule update --recursive --init
     reset-author = commit --amend --reset-author --no-edit
+    graph = git log --all --graph
 [rebase]
     stat = true
 [status]
