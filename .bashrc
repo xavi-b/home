@@ -100,4 +100,9 @@ gitlsswt()
     git ls-files -v . | grep ^S
 }
 
+gitdeletebranchpattern()
+{
+    git branch | grep "$1" | xargs git branch -D
+}
+
 export PATH=~/.local/bin:$PATH
