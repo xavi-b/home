@@ -105,4 +105,13 @@ gitdeletebranchpattern()
     git branch | grep "$1" | xargs git branch -D
 }
 
+nano()
+{
+    if [ ! -f "${@: -1}" ] || [ -w "${@: -1}" ]; then
+        /bin/nano $@
+    else
+        echo -e $BOLD$ROOTCOLOR"Write permission is NOT granted on ${@: -1}"$NORMAL$RESETCOLOR
+    fi
+}
+
 export PATH=~/.local/bin:$PATH
