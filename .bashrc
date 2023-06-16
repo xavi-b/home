@@ -114,4 +114,12 @@ nano()
     fi
 }
 
+mnano()
+{
+    VAR=$1
+    echo ${VAR%/*}
+    mkdir -p ${VAR%/*}
+    nano $VAR
+}
+
 export PATH=~/.local/bin:$PATH
