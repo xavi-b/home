@@ -16,3 +16,6 @@
 !.config/
 !.config/**
 !.Xmodmap
+!.qtpp/
+!.qtpp/**
+!.gdbinit
