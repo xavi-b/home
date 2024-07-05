@@ -16,7 +16,7 @@
     graph = git log --all --graph
     swt = update-index --skip-worktree
     nswt = update-index --no-skip-worktree
-    pushqtgerrit = "!f() { it push gerrit HEAD:refs/for/$1; }; f"
+    pushqtgerrit = "!f() { git push gerrit HEAD:refs/for/$1; }; f"
 [rebase]
     stat = true
 [status]
