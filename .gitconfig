@@ -11,7 +11,7 @@
     ci = commit
     br = branch
     cp = cherry-pick
-    fix-submodules = submodule update --recursive --init
+    fix-submodules = submodule update --recursive --init --progress
     reset-author = commit --amend --reset-author --no-edit
     graph = git log --all --graph
     swt = update-index --skip-worktree
