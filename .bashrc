@@ -77,8 +77,8 @@ mktar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }    # Creates a *.tar.gz archi
 mkzip() { zip -r "${1%%/}.zip" "$1" ; }               # Create a *.zip archive of a file or folder
 
 alias dockerc='docker-compose'
-
 alias dcrestart='dockerc down; dockerc up -d && dockerc logs -ft'
+alias fsizes='du -h --max-depth=1 | sort -hr'
 
 export EDITOR=nano
 
