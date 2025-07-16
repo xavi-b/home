@@ -17,6 +17,9 @@
     swt = update-index --skip-worktree
     nswt = update-index --no-skip-worktree
     pushqtgerrit = "!f() { git push gerrit HEAD:refs/for/$1; }; f"
+    config-qt = "!f() { git config --local user.email xavier.besson@qt.io; git config --local user.name 'Xavier BESSON'; }; f"
+    config-xavi = "!f() { git config --local user.email developer@xavi-b.fr; git config --local user.name 'xavi-b'; }; f"
+    config-gerrit = "!f() { git config --local user.email developer@xavi-b.fr; git config --local user.name 'Xavier BESSON'; }; f"
 [rebase]
     stat = true
 [status]
