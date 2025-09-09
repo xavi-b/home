@@ -79,6 +79,7 @@ mkzip() { zip -r "${1%%/}.zip" "$1" ; }               # Create a *.zip archive o
 alias dockerc='docker-compose'
 alias dcrestart='dockerc down; dockerc up -d && dockerc logs -ft'
 alias fsizes='du -h --max-depth=1 | sort -hr'
+alias show-session="loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}'"
 
 export EDITOR=nano
 
