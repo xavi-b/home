@@ -1,9 +1,5 @@
 #!/bin/bash
 
-source ~/.bash/docker
-source ~/.bash/docker-compose
-source ~/.bash/adb-completion.bash
-source ~/.bash/git-completion.bash
 source ~/.bash/gitprompt.sh
 source ~/.bash/hostcolor.sh
 
@@ -76,7 +72,7 @@ alias mkdir='mkdir -pv'
 mktar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }    # Creates a *.tar.gz archive of a file or folder
 mkzip() { zip -r "${1%%/}.zip" "$1" ; }               # Create a *.zip archive of a file or folder
 
-alias dockerc='docker-compose'
+alias dockerc='docker compose'
 alias dcrestart='dockerc down; dockerc up -d && dockerc logs -ft'
 alias fsizes='du -h --max-depth=1 | sort -hr'
 alias show-session="loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}'"
