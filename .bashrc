@@ -61,6 +61,11 @@ PS2='>>'
 
 export PS2
 
+HISTSIZE=1000
+HISTFILESIZE=2000
+HISTCONTROL=ignoredups
+shopt -s histappend
+
 alias ls='ls --color'
 alias grep='grep --color'
 alias ll='ls -lha'
