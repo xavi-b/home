@@ -20,6 +20,8 @@
     config-qt = "!f() { git config --local user.email xavier.besson@qt.io; git config --local user.name 'Xavier BESSON'; }; f"
     config-xavi = "!f() { git config --local user.email developer@xavi-b.fr; git config --local user.name 'xavi-b'; }; f"
     config-gerrit = "!f() { git config --local user.email developer@xavi-b.fr; git config --local user.name 'Xavier BESSON'; }; f"
+    squash-n-edit = "!f() { git reset --soft HEAD~$1 && git commit --edit -m $2; }; f"
+    squash-n-last = "!f() { git reset --soft HEAD~$1 && git commit --reuse-message=HEAD@{1}; }; f"
 [rebase]
     stat = true
 [status]
