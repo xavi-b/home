@@ -1,0 +1,17 @@
+[$Version]
+update_info=kxkb_variants.upd:split-variants,kxkb.upd:remove-empty-lists,kxkb.upd:add-back-resetoptions
+
+[Layout]
+DisplayNames=usi,
+LayoutList=xintl,xeuro
+LayoutLoopCount=-1
+Model=pc105
+Options=terminate:ctrl_alt_bksp
+ResetOldOptions=true
+ShowFlag=false
+ShowLabel=true
+ShowLayoutIndicator=true
+ShowSingle=false
+SwitchMode=Global
+Use=true
+VariantList=alt-intl,basic

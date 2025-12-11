@@ -1,6 +1,9 @@
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
-    include "us(euro)+group(win_space_toggle)"
+    include "us(basic)"
+
+    name[Group1]= "xeuro";
+
     key <AE01>  {[exclam         ,       1]};
     key <AE02>  {[at             ,       2]};
     key <AE03>  {[numbersign     ,       3]};
@@ -11,4 +14,7 @@ xkb_symbols "basic" {
     key <AE08>  {[asterisk       ,       8]};
     key <AE09>  {[parenleft      ,       9]};
     key <AE10>  {[parenright     ,       0]};
+
+    key <AD03>  { [  NoSymbol,   NoSymbol,   EuroSign,  NoSymbol ]      };
+    key <AD03>  { [  NoSymbol,   NoSymbol,   NoSymbol,  EuroSign ]      };
 };
