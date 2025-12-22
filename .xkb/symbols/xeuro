@@ -13,7 +13,7 @@ xkb_symbols "basic" {
     key <AE07>  {[ampersand      ,       7]};
     key <AE08>  {[asterisk       ,       8]};
     key <AE09>  {[parenleft      ,       9]};
-    key <AE10>  {[parenright     ,       0]};
+    key <AE10>  {[parenright     ,       0,       degree]};
 
     key <AD03>  { [  NoSymbol,   NoSymbol,   EuroSign,  NoSymbol ]      };
     key <AD03>  { [  NoSymbol,   NoSymbol,   NoSymbol,  EuroSign ]      };

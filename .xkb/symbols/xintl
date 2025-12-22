@@ -3,7 +3,7 @@ xkb_symbols "alt-intl" {
     include "us(alt-intl)"
 
     name[Group1]= "xintl";
-    
+
     key <AE01> {[exclam      , 1]};
     key <AE02> {[at          , 2]};
     key <AE03> {[numbersign  , 3]};
@@ -13,7 +13,7 @@ xkb_symbols "alt-intl" {
     key <AE07> {[ampersand   , 7]};
     key <AE08> {[asterisk    , 8]};
     key <AE09> {[parenleft   , 9]};
-    key <AE10> {[parenright  , 0]};
+    key <AE10> {[parenright  , 0, degree]};
 
     key <AD03>  { [  NoSymbol,   NoSymbol,   EuroSign,  NoSymbol ]      };
     key <AD03>  { [  NoSymbol,   NoSymbol,   NoSymbol,  EuroSign ]      };
