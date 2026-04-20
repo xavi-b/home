@@ -84,17 +84,14 @@ alias show-session="loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) 
 
 export EDITOR=nano
 
+if [ -x /usr/share/z/z.sh ]; then
 . /usr/share/z/z.sh
+fi
 
 mcd()
 {
     mkdir -p $1
     cd $1
-}
-
-gitdate()
-{
-    GIT_COMMITTER_DATE="$1" git commit --amend --no-edit --date "$1"
 }
 
 gitlsswt()
@@ -125,4 +122,7 @@ mnano()
 }
 
 export PATH="$HOME/.rbenv/bin:$HOME/.local/bin:$PATH"
+
+if [ -x /usr/bin/rbenv ]; then
 eval "$(rbenv init -)"
+fi
