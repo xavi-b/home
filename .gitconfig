@@ -22,6 +22,8 @@
     config-gerrit = "!f() { git config --local user.email developer@xavi-b.fr; git config --local user.name 'Xavier BESSON'; }; f"
     squash-n-edit = "!f() { git reset --soft HEAD~$1 && git commit --edit -m $2; }; f"
     squash-n-last = "!f() { git reset --soft HEAD~$1 && git commit --reuse-message=HEAD@{1}; }; f"
+    redatenow = "!f() { GIT_COMMITTER_DATE=\"$(date)\" git commit --amend --no-edit --date=\"$(date)\"; }; f"
+    redate = "!f() { [ -z \"$1\" ] && echo 'Usage: git redate <date>' && exit 1; GIT_COMMITTER_DATE=\"$1\" git commit --amend --no-edit --date \"$1\"; }; f"
 [rebase]
     stat = true
 [status]
