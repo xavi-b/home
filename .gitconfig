@@ -23,6 +23,12 @@
     squash-n-edit = "!f() { git reset --soft HEAD~$1 && git commit --edit -m $2; }; f"
     squash-n-last = "!f() { git reset --soft HEAD~$1 && git commit --reuse-message=HEAD@{1}; }; f"
     redatenow = "!f() { GIT_COMMITTER_DATE=\"$(date)\" git commit --amend --no-edit --date=\"$(date)\"; }; f"
+    redatenow-n = "!f() { \
+        [ -z \"$1\" ] && echo 'Usage: git redatenow-n <n>' && exit 1; \
+        now=$(date -Iseconds); \
+        GIT_SEQUENCE_EDITOR=: \
+        git rebase -i HEAD~$1 --exec \"GIT_COMMITTER_DATE='$now' git commit --amend --no-edit --date '$now'\"; \
+    }; f"
     redate = "!f() { [ -z \"$1\" ] && echo 'Usage: git redate <date>' && exit 1; GIT_COMMITTER_DATE=\"$1\" git commit --amend --no-edit --date \"$1\"; }; f"
 [rebase]
     stat = true
